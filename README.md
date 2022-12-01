@@ -1,99 +1,99 @@
-## 介绍
+## Introduction
 
-基于Ant Design实现的 Mendix Widget小组件。组件实现了 Ant Design(antd) 中的 [`dropdown`](https://ant.design/components/dropdown-cn) 的绝大部分接口。你可以去[这里](https://ant.design/components/dropdown-cn)查看原始的 antd 组件的各种特性。
+A Mendix Widget widget implemented based on Ant Design. The widget implements most of the interfaces of [`dropdown`](https://ant.design/components/dropdown) in Ant Design (antd). You can go [here](https://ant.design/components/dropdown) to see various features of the original antd component.
 
 ![Ant Design Dropdown](./resources/dropdown%20menu.png)
 
-## 功能特性
+## Features
 
-1. 支持两种下拉样式的选择，包括：`dropdown`和`dropdown button`。
-2. 支持静态定义或数据源datasource动态加载菜单。
-3. 支持自定义每个菜单项的样式和状态。
-4. 支持antd其他样式配置
+1. Support two dropdown styles, including: `dropdown` and `dropdown button`.
+2. Support static definition or dynamic dropdown with datasource.
+3. Customize the style and state of each menu item.
+4. Support other Ant Design API configuration
 
-## 快速安装和使用
+## Quick start
 
-1. 将该组件添加到 Mendix Project 中.
-    1. 从[这里](https://github.com/wiwengweng/mendix-antd-dropdown-menu/releases/download/antdropdownmenu-v1.0.0/mendix.AntDropdownMenu.mpk)下载 mpk 文件.
-    3. 把 mpk 文件复制到你的 Mendix Project 目录 `{YourMendixProjectFolder}/widgets/`.
-    4. 用 Mendix Studio Pro 打开你的 Mendix Project，然后点击菜单 `Menu > App > Synchronize App Directory`.
-2. 使用 `Antd Dropdown Menu`。
-    1. 选择任意页面，并从 Mendix Studio Pro 的右侧 Toolbox 中搜索 `Antd Dropdown Menu`。
-    2. 向页面添加一个`Antd Dropdown Menu`组件。
-    3. 为该组件设置属性。双击该组件，做如下设置：
-        1. 填写组件显示的名称;
-        2. `Render type`选择`Static`;
-        3. 在`Menu items`中增加菜单以及点击菜单触发的动作;
+1. Add the widget to Mendix Project.
+    1. Download the mpk file from [here](https://github.com/wiwengweng/mendix-antd-dropdown-menu/releases/download/antdropdownmenu-v1.0.0/mendix.AntDropdownMenu.mpk).
+    3. Copy the mpk file to your Mendix Project directory `{YourMendixProjectFolder}/widgets/`.
+    4. Open your Mendix Project with Mendix Studio Pro, then click the menu `Menu > App > Synchronize App Directory`.
+2. Use `Antd Dropdown`.
+    1. Select any page and search `Antd Dropdown Menu` from the Toolbox in Mendix Studio Pro.
+    2. Add an `Antd Dropdown Menu` widget to the page.
+    3. Set properties for the widget. Double-click the widget and follow the settings:
+        1. Fill in the `Menu Name`;
+        2. `Render type` -> `Static`;
+        3. Add menu items and trigger actions in `Menu items`;
 
-## Demo 项目
+## Demo project
 
-1. 你可以在[这里](todo)访问在线 demo。  
-2. 也可以下载 demo project，在自己的 Mendix Studio Pro 上启动运行。具体方法如下：
-    1. clone demo project。
-    2. 运行。
+1. You can access the online demo at [here](todo).
+2. You can also download the demo project and run it on your own Mendix Studio Pro. The specific method is as follows:
+    1. clone demo project.
+    2. Run.
     
 
-## 详细配置说明
+## Detailed configuration instructions
 
 ### General
 
-General页面中包含绝大部分的常用配置选项
+The General tab contains most of the common configuration options
 
 ![properties-general](./resources/configuration.png)
 
-* Memu name - 下拉菜单按钮显示的名称
+* Memu name - The name displayed by the dropdown menu button
 
-* Render type - 支持简单下拉，或下拉按钮两种方式，下拉按钮可以支持左侧按钮点击事件配置
+* Render type - Support simple `dropdown`, or `dropdown button`, the dropdown button can support left-side button click event
 
 ![](./resources/dropdown-type.png)
-* Menu type - 支持静态配置若干菜单项，或者通过选择Dynamic使用data source动态渲染菜单
-* Menu items - 静态菜单的菜单项配置，允许用户自行添加任意项
-* popup menu placement - 弹出菜单的位置，分为左上、上、右上、左下、下和右下六种相对位置
-
-
+* Menu type - `Static` supports static configuration with several menu items, or dynamically renders the menu using data source by selecting `Dynamic`
+* Menu items - the menu item configuration of the static menu, allowing users to add any items by themselves
+* popup menu placement - the position of the popup menu, divided into six relative positions: upper left, upper, upper right, lower left, lower and lower right
 
 
 
 Dropdown button properties
-选择button模式下，可以额外配置如下几个属性
+
+In the button mode, you can also configure the following properties
 ![](./resources/dropdown-button.png)
-* Use danger style - 按钮显示危险样式，呈红色
-* Button size - 可以使用 `大` `中` `小`三种按钮大小样式
-* Button type - 可以定义 `primary` `ghost` `dashed` `link` `text` `default`六种样式
-* Button click - 定义组件左侧按钮点击的事件
+* Use danger style - button shows danger style
+* Button size - You can use `large` `medium` `small` button size styles
+* Button type - you can define six styles within `primary` `ghost` `dashed` `link` `text` `default`
+* Button click - defines the event when the button on the left-side of the widget is clicked
 
 
 ### Advanced
 
-定义组件非必要的交互特性，采用默认选项也不影响组件的正常使用.
+Define the non-essential interactive features of the widget, and the default options will work fine.
 
 ![properties-advanced](./resources/advanced.png)
+
 Common
-* Popup menu placement - 弹出菜单的位置
-* Show arrow - 是否显示弹出窗口上的小箭头
-* AutoFocus - 打开后自动聚焦下拉框
-* DestroyPopupOnHide - 关闭后是否销毁 Dropdown
-* Trigger type - 触发下拉的行为, 移动端不支持 hover
+* Popup menu placement - the placement of the popup menu
+* Show arrow - Whether to show the small arrow on the popup window
+* AutoFocus - Automatically focus the dropdown box after opening
+* DestroyPopupOnHide - Whether to destroy the Dropdown after closing
+* Trigger type - Trigger of the dropdown behavior (hover/click), the mobile terminal does not support hover
 
 System properties
-包含两项系统通用配置，配置项可以根据外围的datasource进行可见性和可编辑性进行识别，分别是
+Two general configurations of the system properties. The configuration items can be identified according to the visibility and editability of the upper level datasource:
 * Visiable
 * Editable
 
-## 与 `antd` Dropdown 的功能对比
+## Functional comparison with `antd` Dropdown
 
-这里列举了 `antd` 中 `dropdown` 的所有参数，并说明了该组件是否支持该属性，以及不支持的原因。如果想查看`antd`中原属性的含义，请[移步这里](https://ant.design/components/dropdown-cn)。
+This lists all the parameters of `dropdown` in `antd`, and explains whether the widget supports this APIs, and why without support(eventually developers can DIY). If you want to learn more of the original APIs in `antd`, please [check this out](https://ant.design/components/dropdown).
 
 ![](./resources/feature_supported.png)
 ## Issues, suggestions and feature requests
 [Github Issue](https://github.com/wiwengweng/mendix-antd-dropdown-menu/issues)
 
-同时欢迎小伙伴们进入中国技术论坛，了解和获取更多Mendix widget开发的思想碰撞 [传送门](https://marketplace.siemens.com.cn/low-code-community)
+At the same time, your are welcome to get into the China Technology Forum to get more in Mendix widget development. [check this out](https://marketplace.siemens.com.cn/low-code-community)
 
-## 本地开发和贡献
+## Local development and contributions
 
-1. 克隆项目到本地，并安装依赖:`npm install`. 如果 npm 版本是v7.x.x, （用户可使用`npm -v`检查版本）, 使用一下命令安装依赖:`npm install--legacy-peer-deps`.
-2. 在命令行运行npm start开始编译打包组件:
-    * 项目开始编译...
-    * 等待编译完成，组件会在dist 目录下自动生成；
-    * 开发者可以自行修改package.json中的配置项，指定Mendix的测试项目地址，编译完成后后组件会自动同步到deployment 和 widgets目录中。
+1. Clone the project locally and install dependencies with `npm install`. If the npm version is v7.x.x, (users can use `npm -v` to check the version), use the following command to install dependencies: `npm install --legacy- peer-deps`.
+2. Run npm start in the command line to start bundle the widget:
+    * Project started bundling...
+    * Wait for the dinner, and the widget will be automatically generated in the dist directory;
+    * Developers can modify the package.json, and specify the test project of Mendix. When your dinner is ready, the widget will be automatically synchronized to the `deployment` and `widgets` directories.
