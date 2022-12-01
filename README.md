@@ -92,8 +92,8 @@ System properties
 
 ## 本地开发和贡献
 
-1. Install NPM package dependencies by using: `npm install`. If you use NPM v7.x.x, which can be checked by executing `npm -v`, execute: `npm install --legacy-peer-deps`.
-1. Run `npm start` to watch for code changes. On every change:
-    - the widget will be bundled;
-    - the bundle will be included in a `dist` folder in the root directory of the project;
-    - the bundle will be included in the `deployment` and `widgets` folder of the Mendix test project.
+1. 克隆项目到本地，并安装依赖:`npm install`. 如果 npm 版本是v7.x.x, （用户可使用`npm -v`检查版本）, 使用一下命令安装依赖:`npm install--legacy-peer-deps`.
+2. 在命令行运行npm start开始编译打包组件:
+    * 项目开始编译...
+    * 等待编译完成，组件会在dist 目录下自动生成；
+    * 开发者可以自行修改package.json中的配置项，指定Mendix的测试项目地址，编译完成后后组件会自动同步到deployment 和 widgets目录中。
