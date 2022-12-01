@@ -105,7 +105,7 @@ export function getProperties(_values: AntDropdownMenuPreviewProps, defaultPrope
     }
     */
     if (_values.renderType === "dropdown") {
-        hidePropertiesIn(defaultProperties, _values, ["danger", "size", "buttonType", "buttonClick"]);
+        hidePropertiesIn(defaultProperties, _values, ["danger", "size", "buttonType", "buttonClick", "menuDanger", "menuDisabled"]);
     }
     if (_values.menuType === "dynamic") {
         hidePropertyIn(defaultProperties, _values, "staticMenu");

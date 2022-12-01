@@ -17,11 +17,11 @@ export interface StaticMenuType {
     menuDanger: boolean;
 }
 
-export type PlacementEnum = "bottom" | "bottomLeft" | "bottomRight" | "top" | "topLeft" | "topRight";
-
 export type SizeEnum = "small" | "middle" | "large";
 
 export type ButtonTypeEnum = "default" | "primary" | "dashed" | "ghost" | "link" | "text";
+
+export type PlacementEnum = "bottom" | "bottomLeft" | "bottomRight" | "top" | "topLeft" | "topRight";
 
 export type TriggerEnum = "click" | "hover";
 
@@ -48,11 +48,11 @@ export interface AntDropdownMenuContainerProps {
     menuDisabled?: ListAttributeValue<boolean>;
     menuHelper?: EditableValue<string>;
     dynamicMenuAction?: ActionValue;
-    placement: PlacementEnum;
     danger: boolean;
     size: SizeEnum;
     buttonType: ButtonTypeEnum;
     buttonClick?: ActionValue;
+    placement: PlacementEnum;
     arrow: boolean;
     autoFocus: boolean;
     destroyPopupOnHide: boolean;
@@ -79,11 +79,11 @@ export interface AntDropdownMenuPreviewProps {
     menuDisabled: string;
     menuHelper: string;
     dynamicMenuAction: {} | null;
-    placement: PlacementEnum;
     danger: boolean;
     size: SizeEnum;
     buttonType: ButtonTypeEnum;
     buttonClick: {} | null;
+    placement: PlacementEnum;
     arrow: boolean;
     autoFocus: boolean;
     destroyPopupOnHide: boolean;

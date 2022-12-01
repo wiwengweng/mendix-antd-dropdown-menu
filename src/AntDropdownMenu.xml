@@ -20,7 +20,7 @@
                 </property>
                 <property key="menuType" type="enumeration" defaultValue="static">
                     <caption>Menu type</caption>
-                    <description></description>
+                    <description>Dynamic方式允许用户通过data source动态加载菜单选项</description>
                     <enumerationValues>
                         <enumerationValue key="dynamic">Dynamic</enumerationValue>
                         <enumerationValue key="static">Static</enumerationValue>
@@ -37,22 +37,34 @@
                             </property>
                             <property key="menuLable" type="string">
                                 <caption>Item lable</caption>
-                                <description></description>
+                                <description>菜单项显示的名称</description>
                             </property>
                             <property key="menuAction" type="action">
                                 <caption>Action</caption>
-                                <description></description>
+                                <description>点击菜单触发的动作</description>
                             </property>
                             <property key="menuDanger" type="boolean" defaultValue="false">
                                 <caption>Set item danger</caption>
-                                <description></description>
+                                <description>把菜单项设置为危险项</description>
                             </property>
                         </propertyGroup>
                     </properties>
+                </property><!-- <property key="onClickAction" type="action">
+                    <caption>On click</caption>
+                    <description></description>
+                </property> --><!-- <property key="open" type="boolean" defaultValue="false" required="false">
+                    <caption>Open picker</caption>
+                    <description></description>
                 </property>
+                <property key="onOpenChange" type="action" required="false">
+                    <caption>On open change</caption>
+                    <description></description>
+                </property> -->
+            </propertyGroup>
+            <propertyGroup caption="dynamicDatasource">
                 <property key="dynamicMenu" type="datasource" isList="true" required="false">
                     <caption>Menu data source</caption>
-                    <description></description>
+                    <description>动态菜单的数据源</description>
                 </property>
                 <property key="menuKey" type="attribute" dataSource="dynamicMenu" required="true">
                     <caption>Item key</caption>
@@ -63,69 +75,41 @@
                 </property>
                 <property key="menuLabel" type="attribute" dataSource="dynamicMenu">
                     <caption>Item lable</caption>
-                    <description></description>
+                    <description>菜单项显示的名称</description>
                     <attributeTypes>
                         <attributeType name="String"/>
                     </attributeTypes>
                 </property>
                 <property key="menuDanger" type="attribute" dataSource="dynamicMenu">
                     <caption>Set item danger</caption>
-                    <description></description>
+                    <description>把菜单项设置为危险项</description>
                     <attributeTypes>
                         <attributeType name="Boolean"/>
                     </attributeTypes>
                 </property>
                 <property key="menuDisabled" type="attribute" dataSource="dynamicMenu">
                     <caption>Set item disabled</caption>
-                    <description></description>
+                    <description>把菜单项设置为不可编辑项</description>
                     <attributeTypes>
                         <attributeType name="Boolean"/>
                     </attributeTypes>
                 </property>
                 <property key="menuHelper" type="attribute" required="false">
                     <caption>Helper attribute</caption>
-                    <description></description>
+                    <description>设置辅助ID</description>
                     <attributeTypes>
-                        <attributeType name="String" />
+                        <attributeType name="String"/>
                     </attributeTypes>
                 </property>
                 <property key="dynamicMenuAction" type="action" required="false">
                     <caption>Item action</caption>
-                    <description></description>
+                    <description>动态菜单项触发的动作</description>
                 </property>
-                <!-- <property key="onClickAction" type="action">
-                    <caption>On click</caption>
-                    <description></description>
-                </property> -->
-                <property key="placement" type="enumeration" defaultValue="bottomRight">
-                    <caption>Popup menu placement</caption>
-                    <description></description>
-                    <enumerationValues>
-                        <enumerationValue key="bottom">bottom</enumerationValue>
-                        <enumerationValue key="bottomLeft">bottomLeft</enumerationValue>
-                        <enumerationValue key="bottomRight">bottomRight</enumerationValue>
-                        <enumerationValue key="top">top</enumerationValue>
-                        <enumerationValue key="topLeft">topLeft</enumerationValue>
-                        <enumerationValue key="topRight">topRight</enumerationValue>
-                    </enumerationValues>
-                </property>
-                <!-- <property key="open" type="boolean" defaultValue="false" required="false">
-                    <caption>Open picker</caption>
-                    <description></description>
-                </property>
-                <property key="onOpenChange" type="action" required="false">
-                    <caption>On open change</caption>
-                    <description></description>
-                </property> -->
-            </propertyGroup>
-            <propertyGroup caption="System properties">
-                <systemProperty key="Visibility"></systemProperty>
-                <systemProperty key="Editability"></systemProperty>
             </propertyGroup>
             <propertyGroup caption="dropdown button">
                 <property key="danger" type="boolean" defaultValue="false">
                     <caption>User danger style</caption>
-                    <description></description>
+                    <description>按钮使用危险标识</description>
                 </property>
                 <property key="size" type="enumeration" defaultValue="middle">
                     <caption>Button size</caption>
@@ -135,16 +119,14 @@
                         <enumerationValue key="middle">middle</enumerationValue>
                         <enumerationValue key="large">large</enumerationValue>
                     </enumerationValues>
-                </property>
-                <!-- <property key="loading" type="boolean" defaultValue="false">
+                </property><!-- <property key="loading" type="boolean" defaultValue="false">
                     <caption>Enable loading animation</caption>
                     <description></description>
                 </property>
                 <property key="loadingDelay" type="integer" defaultValue="0">
                     <caption>Delay(in milliseconds)</caption>
                     <description></description>
-                </property> -->
-                <!-- <property key="icon" type="string" required="false">
+                </property> --><!-- <property key="icon" type="string" required="false">
                     <caption>Icon</caption>
                     <description></description>
                 </property> -->
@@ -162,32 +144,48 @@
                 </property>
                 <property key="buttonClick" type="action">
                     <caption>Button click</caption>
-                    <description></description>
+                    <description>左侧按钮点击触发动作</description>
                 </property>
             </propertyGroup>
         </propertyGroup>
         <propertyGroup caption="Advanced">
             <propertyGroup caption="Common">
+                <property key="placement" type="enumeration" defaultValue="bottomRight">
+                    <caption>Popup menu placement</caption>
+                    <description>弹出菜单的位置</description>
+                    <enumerationValues>
+                        <enumerationValue key="bottom">bottom</enumerationValue>
+                        <enumerationValue key="bottomLeft">bottomLeft</enumerationValue>
+                        <enumerationValue key="bottomRight">bottomRight</enumerationValue>
+                        <enumerationValue key="top">top</enumerationValue>
+                        <enumerationValue key="topLeft">topLeft</enumerationValue>
+                        <enumerationValue key="topRight">topRight</enumerationValue>
+                    </enumerationValues>
+                </property>
                 <property key="arrow" type="boolean" defaultValue="false">
                     <caption>Show arrow</caption>
-                    <description></description>
+                    <description>是否显示弹出窗口上的小箭头</description>
                 </property>
                 <property key="autoFocus" type="boolean" defaultValue="false">
                     <caption>AutoFocus</caption>
-                    <description></description>
+                    <description>打开后自动聚焦下拉框</description>
                 </property>
                 <property key="destroyPopupOnHide" type="boolean" defaultValue="false">
                     <caption>DestroyPopupOnHide</caption>
-                    <description></description>
+                    <description>关闭后是否销毁 Dropdown</description>
                 </property>
                 <property key="trigger" type="enumeration" defaultValue="click">
                     <caption>Trigger type</caption>
-                    <description></description>
+                    <description>触发下拉的行为, 移动端不支持 hover</description>
                     <enumerationValues>
                         <enumerationValue key="click">click</enumerationValue>
                         <enumerationValue key="hover">hover</enumerationValue>
                     </enumerationValues>
                 </property>
+            </propertyGroup>
+            <propertyGroup caption="System properties">
+                <systemProperty key="Visibility"></systemProperty>
+                <systemProperty key="Editability"></systemProperty>
             </propertyGroup>
         </propertyGroup>
     </properties>
