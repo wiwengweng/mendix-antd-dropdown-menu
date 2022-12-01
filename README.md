@@ -1,3 +1,4 @@
+[中文版](https://github.com/wiwengweng/mendix-antd-dropdown-menu/blob/main/README-CN.md)
 ## Introduction
 
 A Mendix Widget widget implemented based on Ant Design. The widget implements most of the interfaces of [`dropdown`](https://ant.design/components/dropdown) in Ant Design (antd). You can go [here](https://ant.design/components/dropdown) to see various features of the original antd component.
