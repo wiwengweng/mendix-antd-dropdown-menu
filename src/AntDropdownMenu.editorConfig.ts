@@ -111,7 +111,7 @@ export function getProperties(_values: AntDropdownMenuPreviewProps, defaultPrope
         hidePropertyIn(defaultProperties, _values, "staticMenu");
     }
     if (_values.menuType === "static") {
-        hidePropertiesIn(defaultProperties, _values, ["dynamicMenu", "menuKey", "menuLabel"]);
+        hidePropertiesIn(defaultProperties, _values, ["dynamicMenu", "menuKey", "menuLabel","menuHelper", "dynamicMenuAction"]);
     }
     // if (_values.loading === false) {
     //     hidePropertyIn(defaultProperties, _values, "loadingDelay")

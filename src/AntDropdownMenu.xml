@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <widget id="mendix.antdropdownmenu.AntDropdownMenu" pluginWidget="true" needsEntityContext="true" offlineCapable="true" supportedPlatform="Web" xmlns="http://www.mendix.com/widget/1.0/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.mendix.com/widget/1.0/ ../node_modules/mendix/custom_widget.xsd">
-    <name>Ant Dropdown Menu</name>
+    <name>Antd Dropdown Menu</name>
     <description>A dropdown widget supporting both dropdown menu and dropdown button. It brings the ant-deign widget Dropdown into Mendix and implements almost all the features of the original widget</description>
     <icon/>
     <properties>

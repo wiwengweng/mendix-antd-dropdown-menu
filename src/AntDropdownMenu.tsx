@@ -97,6 +97,7 @@ export class AntDropdownMenu extends Component<AntDropdownMenuContainerProps> {
                     icon={<DownOutlined />}
                     size={this.props.size}
                     type={this.props.buttonType}
+                    danger={this.props.danger}
                     onClick={onclick}
                 >
                     <Space>{this.props.label}</Space>
