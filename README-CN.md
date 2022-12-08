@@ -28,11 +28,8 @@
 
 ## Demo 项目
 
-1. 你可以在[这里](todo)访问在线 demo。  
-2. 也可以下载 demo project，在自己的 Mendix Studio Pro 上启动运行。具体方法如下：
-    1. clone demo project。
-    2. 运行。
-    
+1. 你可以在[这里](https://demo-antdwidgets-sandbox.mxapps.io/)访问在线 demo。  
+2. 也可以从[这里](https://github.com/zjh1943/mendx-antd-widgets-show)下载 demo project，在自己的 Mendix Studio Pro 上启动运行。  
 
 ## 详细配置说明
 
