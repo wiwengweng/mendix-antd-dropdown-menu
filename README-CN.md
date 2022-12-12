@@ -1,4 +1,4 @@
-![GitHub all releases](https://img.shields.io/github/downloads/wiwengweng/mendix-antd-icon/total?style=social)
+![GitHub all releases](https://img.shields.io/github/downloads/wiwengweng/mendix-antd-dropdown-menu/total?style=social)
 
 [English](https://github.com/wiwengweng/mendix-antd-dropdown-menu/blob/main/README.md)
 ## 介绍
