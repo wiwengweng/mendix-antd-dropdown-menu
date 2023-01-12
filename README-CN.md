@@ -30,7 +30,7 @@
 
 ## Demo 项目
 
-1. 你可以在[这里](https://demo-antdwidgets-sandbox.mxapps.io/)访问在线 demo。  
+1. 你可以在[这里](https://demo-antdwidgets100.apps.ap-2a.mendixcloud.com/)访问在线 demo。  
 2. 也可以从[这里](https://github.com/zjh1943/mendx-antd-widgets-show)下载 demo project，在自己的 Mendix Studio Pro 上启动运行。  
 
 ## 详细配置说明
