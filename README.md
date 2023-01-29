@@ -17,7 +17,7 @@ View features of this project on [online demo](https://demo-antdwidgets100.apps.
 ## Quick start
 
 1. Add the widget to Mendix Project.
-    1. Download the latest mpk file from [here](https://github.com/wiwengweng/mendix-antd-icon/releases/).
+    1. Download the latest mpk file from [here](https://github.com/wiwengweng/mendix-antd-dropdown-menu/releases).
     3. Copy the mpk file to your Mendix Project directory `{YourMendixProjectFolder}/widgets/`.
     4. Open your Mendix Project with Mendix Studio Pro, then click the menu `Menu > App > Synchronize App Directory`.
 2. Use `Antd Dropdown`.
