@@ -17,7 +17,7 @@
 ## 快速安装和使用
 
 1. 将该组件添加到 Mendix Project 中.
-    1. 从[这里](https://github.com/wiwengweng/mendix-antd-dropdown-menu/releases/download/antdropdownmenu-v1.0.0/mendix.AntDropdownMenu.mpk)下载 mpk 文件.
+    1. 从[这里](https://github.com/wiwengweng/mendix-antd-icon/releases/)下载最新版本的 mpk 文件.
     3. 把 mpk 文件复制到你的 Mendix Project 目录 `{YourMendixProjectFolder}/widgets/`.
     4. 用 Mendix Studio Pro 打开你的 Mendix Project，然后点击菜单 `Menu > App > Synchronize App Directory`.
 2. 使用 `Antd Dropdown Menu`。
