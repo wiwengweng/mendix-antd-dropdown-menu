@@ -1,7 +1,7 @@
 {
   "name": "antdropdownmenu",
   "widgetName": "AntDropdownMenu",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "A dropdown widget supporting both dropdown menu and dropdown button. It brings the ant-deign widget Dropdown into Mendix and implements almost all the features of the original widget",
   "copyright": "© Mendix Technology BV 2022. All rights reserved.",
   "author": "Andes",
